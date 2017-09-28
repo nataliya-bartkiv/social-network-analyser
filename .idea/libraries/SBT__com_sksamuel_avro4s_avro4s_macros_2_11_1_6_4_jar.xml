@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="SBT: com.sksamuel.avro4s:avro4s-macros_2.11:1.6.4:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.sksamuel.avro4s/avro4s-macros_2.11/jars/avro4s-macros_2.11-1.6.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.sksamuel.avro4s/avro4s-macros_2.11/srcs/avro4s-macros_2.11-1.6.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

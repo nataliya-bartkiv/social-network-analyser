@@ -1,7 +1,8 @@
 package com.eleks.socialnetworkanalyser
 
+import com.eleks.socialnetworkanalyser.configs._
 import com.eleks.socialnetworkanalyser.producers._
-import com.eleks.socialnetworkanalyser.utilities._
+import com.eleks.socialnetworkanalyser.streaming.PostStatsStreamer
 
 object Main {
     def main(args : Array[String]) : Unit = {
@@ -12,6 +13,9 @@ object Main {
             return
         }
 
+        PostStatsStreamer.configure(StreamingConfigManager.getPostStatsConfig(config))
+        val postStatsStreamer = new Thread(PostStatsStreamer)
+
         UserProducer.configure(ProducerConfigManager.getUserConfig(config))
         val userProducer = new Thread(UserProducer)
 
@@ -21,8 +25,9 @@ object Main {
         ActionProducer.configure(ProducerConfigManager.getActionConfig(config))
         val actionProducer = new Thread(ActionProducer)
 
-        userProducer.start()
-        postProducer.start()
+        postStatsStreamer.start()
+        //userProducer.start()
+        //postProducer.start()
         actionProducer.start()
     }
 }

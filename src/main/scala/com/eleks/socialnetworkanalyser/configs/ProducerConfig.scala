@@ -1,4 +1,4 @@
-package com.eleks.socialnetworkanalyser.utilities
+package com.eleks.socialnetworkanalyser.configs
 
 case class ProducerConfig (
     brokerList : String = "localhost:9092",

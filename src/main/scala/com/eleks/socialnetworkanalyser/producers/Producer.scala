@@ -1,7 +1,7 @@
 package com.eleks.socialnetworkanalyser.producers
 
 import java.util._
-import com.eleks.socialnetworkanalyser.utilities.ProducerConfig
+import com.eleks.socialnetworkanalyser.configs.ProducerConfig
 import org.apache.kafka.clients.producer._
 
 abstract class Producer extends Runnable {

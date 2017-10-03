@@ -1,6 +1,6 @@
-package com.eleks.socialnetworkanalyser.utilities
+package com.eleks.socialnetworkanalyser.configs
 
-import scopt.{OptionDef, OptionParser, RenderingMode}
+import scopt.{OptionParser, RenderingMode}
 
 object ConfigParser {
     var coreObj : OptionParser[Config] = _

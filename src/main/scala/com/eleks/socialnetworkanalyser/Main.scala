@@ -6,7 +6,6 @@ import com.eleks.socialnetworkanalyser.streaming.PostStatsStreamer
 
 object Main {
     def main(args : Array[String]) : Unit = {
-
         val config = ConfigParser.parse(args)
 
         if(config == null) {

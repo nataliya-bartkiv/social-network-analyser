@@ -1,77 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/streaming/Streamer.scala" line="29" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/streaming/Streamer.scala" line="23" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="57874077-4e5f-418c-84c6-6bfcc4613e61" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/configs/StreamerConfig.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/configs/StreamingConfigManager.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/entities/CountryStats.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/entities/PostStats.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/entities/UserStats.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/streaming/PostStatsStreamer.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/streaming/Streamer.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/utilities/AvroSerde.scala" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/utilities/ImplicitConversions.scala" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/SBT__com_fasterxml_jackson_core_jackson_core_2_8_4_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/SBT__com_fasterxml_jackson_core_jackson_databind_2_8_4_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/SBT__net_jpountz_lz4_lz4_1_2_0_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/SBT__org_apache_kafka_kafka_clients_0_8_2_1_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/SBT__org_slf4j_slf4j_api_1_7_21_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/SBT__org_xerial_snappy_snappy_java_1_1_1_6_jar.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$27691cb4cddfe20a93c7.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/project/target/config-classes/$e75979991f417d84c252.cache" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/utilities/Config.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/configs/Config.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/utilities/ConfigParser.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/configs/ConfigParser.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/utilities/ProducerConfig.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/configs/ProducerConfig.scala" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/utilities/ProducerConfigManager.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/configs/ProducerConfigManager.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/social-network-analyser-build.iml" afterPath="$PROJECT_DIR$/.idea/modules/social-network-analyser-build.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules/social-network-analyser.iml" afterPath="$PROJECT_DIR$/.idea/modules/social-network-analyser.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.sbt" afterPath="$PROJECT_DIR$/build.sbt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/Main.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/Main.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/producers/Producer.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/producers/Producer.scala" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/socialnetworkanalyser-socialnetworkanalyser$sources-compile-internal.xml" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/socialnetworkanalyser-socialnetworkanalyser$sources-compile-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/socialnetworkanalyser-socialnetworkanalyser$sources-compile.xml" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/socialnetworkanalyser-socialnetworkanalyser$sources-compile.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/socialnetworkanalyser-socialnetworkanalyser$sources-optional.xml" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/socialnetworkanalyser-socialnetworkanalyser$sources-optional.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/socialnetworkanalyser-socialnetworkanalyser$sources-plugin.xml" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/socialnetworkanalyser-socialnetworkanalyser$sources-plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/socialnetworkanalyser-socialnetworkanalyser$sources-pom.xml" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/socialnetworkanalyser-socialnetworkanalyser$sources-pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/socialnetworkanalyser-socialnetworkanalyser$sources-provided.xml" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/socialnetworkanalyser-socialnetworkanalyser$sources-provided.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/socialnetworkanalyser-socialnetworkanalyser$sources-runtime-internal.xml" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/socialnetworkanalyser-socialnetworkanalyser$sources-runtime-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/socialnetworkanalyser-socialnetworkanalyser$sources-runtime.xml" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/socialnetworkanalyser-socialnetworkanalyser$sources-runtime.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/socialnetworkanalyser-socialnetworkanalyser$sources-scala-tool.xml" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/socialnetworkanalyser-socialnetworkanalyser$sources-scala-tool.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/socialnetworkanalyser-socialnetworkanalyser$sources-test-internal.xml" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/socialnetworkanalyser-socialnetworkanalyser$sources-test-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/socialnetworkanalyser-socialnetworkanalyser$sources-test.xml" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/socialnetworkanalyser-socialnetworkanalyser$sources-test.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/socialnetworkanalyser-socialnetworkanalyser_2.11-compile-internal.xml" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/socialnetworkanalyser-socialnetworkanalyser_2.11-compile-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/socialnetworkanalyser-socialnetworkanalyser_2.11-compile.xml" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/socialnetworkanalyser-socialnetworkanalyser_2.11-compile.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/socialnetworkanalyser-socialnetworkanalyser_2.11-optional.xml" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/socialnetworkanalyser-socialnetworkanalyser_2.11-optional.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/socialnetworkanalyser-socialnetworkanalyser_2.11-plugin.xml" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/socialnetworkanalyser-socialnetworkanalyser_2.11-plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/socialnetworkanalyser-socialnetworkanalyser_2.11-pom.xml" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/socialnetworkanalyser-socialnetworkanalyser_2.11-pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/socialnetworkanalyser-socialnetworkanalyser_2.11-provided.xml" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/socialnetworkanalyser-socialnetworkanalyser_2.11-provided.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/socialnetworkanalyser-socialnetworkanalyser_2.11-runtime-internal.xml" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/socialnetworkanalyser-socialnetworkanalyser_2.11-runtime-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/socialnetworkanalyser-socialnetworkanalyser_2.11-runtime.xml" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/socialnetworkanalyser-socialnetworkanalyser_2.11-runtime.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/socialnetworkanalyser-socialnetworkanalyser_2.11-scala-tool.xml" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/socialnetworkanalyser-socialnetworkanalyser_2.11-scala-tool.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/socialnetworkanalyser-socialnetworkanalyser_2.11-test-internal.xml" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/socialnetworkanalyser-socialnetworkanalyser_2.11-test-internal.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/socialnetworkanalyser-socialnetworkanalyser_2.11-test.xml" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/reports/socialnetworkanalyser-socialnetworkanalyser_2.11-test.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/socialnetworkanalyser/socialnetworkanalyser$sources/0.1/resolved.xml.properties" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/socialnetworkanalyser/socialnetworkanalyser$sources/0.1/resolved.xml.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/socialnetworkanalyser/socialnetworkanalyser$sources/0.1/resolved.xml.xml" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/socialnetworkanalyser/socialnetworkanalyser$sources/0.1/resolved.xml.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/socialnetworkanalyser/socialnetworkanalyser_2.11/0.1/resolved.xml.properties" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/socialnetworkanalyser/socialnetworkanalyser_2.11/0.1/resolved.xml.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/socialnetworkanalyser/socialnetworkanalyser_2.11/0.1/resolved.xml.xml" afterPath="$PROJECT_DIR$/target/scala-2.11/resolution-cache/socialnetworkanalyser/socialnetworkanalyser_2.11/0.1/resolved.xml.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/$global/dumpStructure/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/$global/dumpStructure/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.11/input_dsp" afterPath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.11/input_dsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.11/output_dsp" afterPath="$PROJECT_DIR$/target/streams/$global/dependencyPositions/$global/streams/update_cache_2.11/output_dsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/ivyConfiguration/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/ivyConfiguration/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.11/inputs" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.11/inputs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.11/output" afterPath="$PROJECT_DIR$/target/streams/$global/update/$global/streams/update_cache_2.11/output" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" afterPath="$PROJECT_DIR$/target/streams/$global/updateClassifiers/$global/streams/out" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/compile/externalDependencyClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/compile/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/compile/managedClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/runtime/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/runtime/externalDependencyClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/runtime/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/runtime/managedClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/externalDependencyClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/test/externalDependencyClasspath/$global/streams/export" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/streams/test/managedClasspath/$global/streams/export" afterPath="$PROJECT_DIR$/target/streams/test/managedClasspath/$global/streams/export" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/configs/StreamerConfig.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/configs/StreamerConfig.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/configs/StreamingConfigManager.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/configs/StreamingConfigManager.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/streaming/PostStatsStreamer.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/streaming/PostStatsStreamer.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/streaming/Streamer.scala" afterPath="$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/streaming/Streamer.scala" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/project/project/target/" />
@@ -111,8 +50,8 @@
       <file leaf-file-name="Main.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/Main.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="29" column="30" lean-forward="true" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+            <state relative-caret-position="18">
+              <caret line="7" column="45" lean-forward="false" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
               <folding>
                 <element signature="e#41#89#0" expanded="true" />
               </folding>
@@ -120,11 +59,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Streamer.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Streamer.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/streaming/Streamer.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-216">
-              <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+            <state relative-caret-position="342">
+              <caret line="19" column="43" lean-forward="false" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
               <folding>
                 <element signature="e#51#78#0" expanded="true" />
               </folding>
@@ -132,13 +71,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PostStatsStreamer.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ProducerConfig.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/configs/ProducerConfig.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="5" column="4" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConfigParser.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/configs/ConfigParser.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="4" column="7" lean-forward="false" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PostStatsStreamer.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/streaming/PostStatsStreamer.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="61" lean-forward="false" selection-start-line="8" selection-start-column="61" selection-end-line="8" selection-end-column="61" />
+            <state relative-caret-position="18">
+              <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
               <folding>
-                <element signature="e#50#117#0" expanded="true" />
+                <element signature="e#51#118#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -147,8 +106,18 @@
       <file leaf-file-name="StreamingConfigManager.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/configs/StreamingConfigManager.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="34" />
+            <state relative-caret-position="504">
+              <caret line="28" column="25" lean-forward="false" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StreamerConfig.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/configs/StreamerConfig.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="10" column="69" lean-forward="true" selection-start-line="10" selection-start-column="69" selection-end-line="10" selection-end-column="69" />
               <folding />
             </state>
           </provider>
@@ -196,13 +165,13 @@
         <option value="$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/configs/ProducerConfig.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/configs/ProducerConfigManager.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/producers/Producer.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/configs/StreamingConfigManager.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/producers/PostProducer.scala" />
         <option value="$PROJECT_DIR$/build.sbt" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/configs/StreamerConfig.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/utilities/ImplicitConversions.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/Main.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/streaming/PostStatsStreamer.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/configs/StreamingConfigManager.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/configs/StreamerConfig.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/streaming/Streamer.scala" />
       </list>
     </option>
@@ -535,21 +504,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="scala-line">
-          <url>file://$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/streaming/PostStatsStreamer.scala</url>
-          <line>23</line>
-          <properties />
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="scala-line">
-          <url>file://$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/streaming/PostStatsStreamer.scala</url>
-          <line>13</line>
-          <properties />
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="10" />
+      <option name="time" value="12" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -559,7 +514,7 @@
         <state relative-caret-position="72">
           <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
           <folding>
-            <element signature="e#50#117#0" expanded="true" />
+            <element signature="e#51#118#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -613,6 +568,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
           <caret line="29" column="42" lean-forward="false" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
+          <folding>
+            <element signature="e#51#103#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -674,6 +632,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
           <caret line="29" column="42" lean-forward="false" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
+          <folding>
+            <element signature="e#51#103#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -782,24 +743,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/configs/ConfigParser.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="7" lean-forward="false" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/configs/ProducerConfig.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="11" lean-forward="false" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/configs/Config.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="7" column="18" lean-forward="true" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -867,16 +815,8 @@
         <state relative-caret-position="198">
           <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
-            <element signature="e#51#91#0" expanded="true" />
+            <element signature="e#51#91#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/configs/StreamerConfig.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="49" lean-forward="true" selection-start-line="7" selection-start-column="49" selection-end-line="7" selection-end-column="74" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -890,8 +830,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/Main.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="29" column="30" lean-forward="true" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
+        <state relative-caret-position="18">
+          <caret line="7" column="45" lean-forward="false" selection-start-line="7" selection-start-column="45" selection-end-line="7" selection-end-column="45" />
           <folding>
             <element signature="e#41#89#0" expanded="true" />
           </folding>
@@ -900,28 +840,52 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/configs/StreamingConfigManager.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="24" lean-forward="true" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="34" />
+        <state relative-caret-position="504">
+          <caret line="28" column="25" lean-forward="false" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/configs/StreamerConfig.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="69" lean-forward="true" selection-start-line="10" selection-start-column="69" selection-end-line="10" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/streaming/Streamer.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="19" column="43" lean-forward="false" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+          <folding>
+            <element signature="e#51#78#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/configs/ProducerConfig.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="4" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/configs/ConfigParser.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="7" lean-forward="false" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/streaming/PostStatsStreamer.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="61" lean-forward="false" selection-start-line="8" selection-start-column="61" selection-end-line="8" selection-end-column="61" />
+        <state relative-caret-position="18">
+          <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
           <folding>
-            <element signature="e#50#117#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/eleks/socialnetworkanalyser/streaming/Streamer.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-216">
-          <caret line="14" column="23" lean-forward="false" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
-          <folding>
-            <element signature="e#51#78#0" expanded="true" />
+            <element signature="e#51#118#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -1,11 +1,12 @@
 package com.eleks.socialnetworkanalyser.configs
 
-import io.confluent.kafka.streams.serdes.avro.GenericAvroSerde
+import com.eleks.socialnetworkanalyser.utilities.AvroSerde
 
 case class StreamerConfig (appId : String,
-                           bootstrapServers : String,
-                           keySerde : String = classOf[GenericAvroSerde].toString,
-                           valueSerde : String = classOf[GenericAvroSerde].toString,
+                           bootstrapServers : String = "http://localhost:9092/",
+                           keySerde : String = classOf[AvroSerde].getName,
+                           valueSerde : String = classOf[AvroSerde].getName,
                            inputTopic : String,
-                           outputTopic : String
+                           outputTopic : String,
+                           schema : String = "http://localhost:8081/"
                           )

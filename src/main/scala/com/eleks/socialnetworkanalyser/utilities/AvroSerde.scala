@@ -17,9 +17,13 @@ class AvroSerde extends Serde[AnyRef] {
         inner.deserializer.close()
     }
 
-    override def serializer: Serializer[AnyRef] = inner.serializer()
+    override def serializer: Serializer[AnyRef] = {
+        inner.serializer()
+    }
 
-    override def deserializer: Deserializer[AnyRef] = inner.deserializer()
+    override def deserializer: Deserializer[AnyRef] = {
+        inner.deserializer()
+    }
 
 
     override def configure(configs: util.Map[String, _], isKey: Boolean): Unit = {

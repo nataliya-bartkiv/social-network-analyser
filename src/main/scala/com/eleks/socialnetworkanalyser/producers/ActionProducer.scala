@@ -3,6 +3,8 @@ package com.eleks.socialnetworkanalyser.producers
 import com.eleks.socialnetworkanalyser.entities.Action
 import com.eleks.socialnetworkanalyser.generators.ActionGenerator
 import com.sksamuel.avro4s.RecordFormat
+import org.apache.avro.generic.GenericRecord
+
 import scala.util.Random
 
 object ActionProducer extends Producer {
@@ -14,7 +16,7 @@ object ActionProducer extends Producer {
                 val instantActionsCount = 3 + Random.nextInt(3); //From 3 to 5 actions per second
                 for (_ <- 0 until instantActionsCount) {
                     val action = ActionGenerator.next()
-                    val formattedAction = formatter.to(action)
+                    val formattedAction: GenericRecord = formatter.to(action)
                     produce(action.actionId, formattedAction)
                 }
 

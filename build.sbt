@@ -14,5 +14,6 @@ libraryDependencies ++= Seq(
     "com.sksamuel.avro4s" %% "avro4s-core" % "1.6.4",
     "org.apache.httpcomponents" % "httpclient" % "4.5.3",
     "org.apache.kafka" % "kafka-streams" % "0.11.0.1",
+    "com.fasterxml.jackson.module" % "jackson-module-scala_2.11" % "2.9.1"
     //"com.tuplejump" % "kafka-connect-cassandra" % "0.0.7"
 )

@@ -3,7 +3,6 @@ package com.eleks.socialnetworkanalyser.producers
 import com.eleks.socialnetworkanalyser.entities.Post
 import com.eleks.socialnetworkanalyser.generators.PostGenerator
 import com.sksamuel.avro4s.RecordFormat
-
 import scala.util.Random
 
 object PostProducer extends Producer {

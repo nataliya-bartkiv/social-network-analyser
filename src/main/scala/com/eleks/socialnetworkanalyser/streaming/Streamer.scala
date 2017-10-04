@@ -2,7 +2,6 @@ package com.eleks.socialnetworkanalyser.streaming
 
 import java.util.Properties
 import java.util.concurrent.TimeUnit
-
 import com.eleks.socialnetworkanalyser.configs.StreamerConfig
 import io.confluent.kafka.serializers.AbstractKafkaAvroSerDeConfig
 import org.apache.kafka.streams._

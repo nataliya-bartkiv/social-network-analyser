@@ -2,7 +2,7 @@ package com.eleks.socialnetworkanalyser
 
 import com.eleks.socialnetworkanalyser.configs._
 import com.eleks.socialnetworkanalyser.producers._
-import com.eleks.socialnetworkanalyser.streaming.PostStatsStreamer
+import com.eleks.socialnetworkanalyser.streaming._
 
 object Main {
     def main(args : Array[String]) : Unit = {
@@ -25,7 +25,7 @@ object Main {
         val actionProducer = new Thread(ActionProducer)
 
         postStatsStreamer.start()
-        //userProducer.start()
+        userProducer.start()
         postProducer.start()
         actionProducer.start()
     }

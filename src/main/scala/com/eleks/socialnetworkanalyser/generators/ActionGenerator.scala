@@ -1,7 +1,6 @@
 package com.eleks.socialnetworkanalyser.generators
 
 import com.eleks.socialnetworkanalyser.entities.{Action, ActionType}
-
 import scala.io.Source
 import scala.util.Random
 

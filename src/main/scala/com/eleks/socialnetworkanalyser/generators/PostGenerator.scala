@@ -1,9 +1,7 @@
 package com.eleks.socialnetworkanalyser.generators
 
 import java.util.concurrent.atomic.AtomicInteger
-
 import com.eleks.socialnetworkanalyser.entities.Post
-
 import scala.io.Source
 import scala.util.Random
 

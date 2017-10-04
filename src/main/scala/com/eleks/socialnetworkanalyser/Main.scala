@@ -15,6 +15,9 @@ object Main {
         PostStatsStreamer.configure(StreamingConfigManager.getPostStatsConfig(config))
         val postStatsStreamer = new Thread(PostStatsStreamer)
 
+        UserStatsStreamer.configure(StreamingConfigManager.getUserStatsConfig(config))
+        val userStatsStreamer = new Thread(UserStatsStreamer)
+
         UserProducer.configure(ProducerConfigManager.getUserConfig(config))
         val userProducer = new Thread(UserProducer)
 
@@ -25,6 +28,8 @@ object Main {
         val actionProducer = new Thread(ActionProducer)
 
         postStatsStreamer.start()
+        userStatsStreamer.start()
+
         userProducer.start()
         postProducer.start()
         actionProducer.start()

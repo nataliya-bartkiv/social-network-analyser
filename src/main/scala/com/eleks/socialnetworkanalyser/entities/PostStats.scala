@@ -1,7 +1,7 @@
 package com.eleks.socialnetworkanalyser.entities
 
-case class PostStats(postId : Int,
-                     likeCount: Int,
-                     dislikeCount : Int,
-                     repostCount : Int
+case class PostStats(var postId : Int = 0,
+                     var likeCount: Int = 0,
+                     var dislikeCount : Int = 0,
+                     var repostCount : Int = 0
                     )

@@ -26,7 +26,7 @@ object Main {
 
         postStatsStreamer.start()
         //userProducer.start()
-        //postProducer.start()
+        postProducer.start()
         actionProducer.start()
     }
 }

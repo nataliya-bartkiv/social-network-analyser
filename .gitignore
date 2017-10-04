@@ -1,4 +1,40 @@
 *.class
 *.log
 
-# Custommnt/# Byte-compiled / optimized / DLL files__pycache__/*.py[cod]*$py.class# C extensions*.so# Distribution / packaging.Pythonenv/build/develop-eggs/dist/downloads/eggs/.eggs/lib/lib64/parts/sdist/var/wheels/*.egg-info/.installed.cfg*.egg# PyInstaller#  Usually these files are written by a python script from a template#  before PyInstaller builds the exe, so as to inject date/other infos into it.*.manifest*.spec# Installer logspip-log.txtpip-delete-this-directory.txtpip-selfcheck.json# Unit test / coverage reportshtmlcov/.tox/.coverage.coverage.*.cachenosetests.xmlcoverage.xml*.cover.hypothesis/# Translations*.mo*.pot# Django stuff:*.loglocal_settings.py# Flask stuff:instance/.webassets-cache# Scrapy stuff:.scrapy# Sphinx documentationdocs/_build/# PyBuildertarget/# Jupyter Notebook.ipynb_checkpoints# pyenv.python-version# python venvbin/# celery beat schedule filecelerybeat-schedule# SageMath parsed files*.sage.py# dotenv.env# virtualenvpyvenv.cfg.venvvenv/ENV/# Spyder project settings.spyderproject.spyproject# Rope project settings.ropeproject# mkdocs documentation/site# mypy.mypy_cache/# Intellij*.iml.idea
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+# Logs and databases #
+######################
+*.log
+*.sql
+*.sqlite
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

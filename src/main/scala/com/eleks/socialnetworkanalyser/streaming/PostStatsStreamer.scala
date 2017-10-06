@@ -9,7 +9,7 @@ import org.apache.kafka.streams.kstream._
 
 import scala.collection.mutable
 
-object PostStatsStreamer extends Streamer[Int, GenericRecord, Int, GenericRecord]  {
+object PostStatsStreamer extends Streamer  {
     val inputFormatter: RecordFormat[Action] = RecordFormat[Action]
     val outputFormatter: RecordFormat[PostStats] = RecordFormat[PostStats]
 
@@ -57,14 +57,8 @@ object PostStatsStreamer extends Streamer[Int, GenericRecord, Int, GenericRecord
         }
     }
 
-    override def transform(streams: List[KStream[Int, GenericRecord]]): KStream[Int, GenericRecord] = {
-        //Only one stream is expected
-        if(streams.length != 1) {
-            throw new IllegalArgumentException("Only one topic to get post stats is needed")
-        }
-
-        val postStream = streams.head
-        postStream
+    def transform(stream: KStream[Int, GenericRecord]): KStream[Int, GenericRecord] = {
+        stream
                 .map[Int, GenericRecord](new PostStatsKeyMapper)
                 .groupByKey()
                 .aggregate[mutable.Map[Int, PostStats]] (
@@ -73,5 +67,20 @@ object PostStatsStreamer extends Streamer[Int, GenericRecord, Int, GenericRecord
                     new JSONSerde[mutable.Map[Int, PostStats]])
                 .toStream()
                 .map[Int, GenericRecord](new PostStatsRecordMapper)
+    }
+
+    override def configureStreamBuilder() : KStreamBuilder = {
+        val streamCount = 1
+        val topics = config.inputTopics.split(";")
+        if(topics.length != streamCount) {
+            throw new IllegalArgumentException("There must be 1 topic to create post statistics!")
+        }
+        val topic = topics.head
+
+        val streamBuilder = new KStreamBuilder()
+        val stream: KStream[Int, GenericRecord] = streamBuilder.stream(topic)
+        val outputStream = transform(stream)
+        outputStream.to(config.outputTopic)
+        streamBuilder
     }
 }

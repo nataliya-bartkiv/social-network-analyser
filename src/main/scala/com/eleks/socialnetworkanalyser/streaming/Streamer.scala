@@ -8,7 +8,7 @@ import io.confluent.kafka.serializers.AbstractKafkaAvroSerDeConfig
 import org.apache.kafka.streams._
 import org.apache.kafka.streams.kstream._
 
-abstract class Streamer[TInputKey, TInputValue, TOutputKey, TOutputValue] extends Runnable {
+abstract class Streamer extends Runnable {
     protected var config : StreamerConfig = _
     protected var streams : KafkaStreams = _
 
@@ -27,22 +27,7 @@ abstract class Streamer[TInputKey, TInputValue, TOutputKey, TOutputValue] extend
         streams = new KafkaStreams(streamBuilder, properties)
     }
 
-    def configureStreamBuilder() : KStreamBuilder = {
-
-        val streamBuilder: KStreamBuilder = new KStreamBuilder()
-        var inputStreams: List[KStream[TInputKey, TInputValue]] = List()
-
-        val topics = config.inputTopics.split(";")
-        for(topic <- topics) {
-            val stream: KStream[TInputKey, TInputValue] = streamBuilder.stream(topic)
-            inputStreams = stream :: inputStreams
-        }
-
-        val outputStream: KStream[TOutputKey, TOutputValue] = transform(inputStreams)
-        outputStream.to(config.outputTopic)
-
-        streamBuilder
-    }
+    def configureStreamBuilder() : KStreamBuilder
 
 
     override def run(): Unit = {
@@ -54,6 +39,4 @@ abstract class Streamer[TInputKey, TInputValue, TOutputKey, TOutputValue] extend
             }
         }))
     }
-
-    def transform(streams: List[KStream[TInputKey, TInputValue]]) : KStream[TOutputKey, TOutputValue]
 }

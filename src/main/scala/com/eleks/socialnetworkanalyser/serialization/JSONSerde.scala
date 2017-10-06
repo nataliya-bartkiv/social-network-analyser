@@ -8,7 +8,7 @@ import com.fasterxml.jackson.core.`type`.TypeReference
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.databind.exc.{UnrecognizedPropertyException => UPE}
 import com.fasterxml.jackson.module.scala.DefaultScalaModule
-import org.apache.kafka.common.serialization.{Deserializer, Serde, Serializer}
+import org.apache.kafka.common.serialization._
 
 
 /*

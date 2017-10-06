@@ -4,7 +4,6 @@ import com.eleks.socialnetworkanalyser.entities.Action
 import com.eleks.socialnetworkanalyser.generators.ActionGenerator
 import com.sksamuel.avro4s.RecordFormat
 import org.apache.avro.generic.GenericRecord
-
 import scala.util.Random
 
 object ActionProducer extends Producer {

@@ -6,6 +6,7 @@ import com.sksamuel.avro4s.RecordFormat
 import org.apache.avro.generic.GenericRecord
 import org.apache.kafka.streams.KeyValue
 import org.apache.kafka.streams.kstream._
+
 import scala.collection.mutable
 
 object PostStatsStreamer extends Streamer[Int, GenericRecord, Int, GenericRecord]  {
@@ -56,8 +57,14 @@ object PostStatsStreamer extends Streamer[Int, GenericRecord, Int, GenericRecord
         }
     }
 
-    override def transform(stream: KStream[Int, GenericRecord]) : KStream[Int, GenericRecord] = {
-        stream
+    override def transform(streams: List[KStream[Int, GenericRecord]]): KStream[Int, GenericRecord] = {
+        //Only one stream is expected
+        if(streams.length != 1) {
+            throw new IllegalArgumentException("Only one topic to get post stats is needed")
+        }
+
+        val postStream = streams.head
+        postStream
                 .map[Int, GenericRecord](new PostStatsKeyMapper)
                 .groupByKey()
                 .aggregate[mutable.Map[Int, PostStats]] (

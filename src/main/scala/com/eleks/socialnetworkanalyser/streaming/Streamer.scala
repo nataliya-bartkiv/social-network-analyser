@@ -2,6 +2,7 @@ package com.eleks.socialnetworkanalyser.streaming
 
 import java.util.Properties
 import java.util.concurrent.TimeUnit
+
 import com.eleks.socialnetworkanalyser.configs.StreamerConfig
 import io.confluent.kafka.serializers.AbstractKafkaAvroSerDeConfig
 import org.apache.kafka.streams._
@@ -20,19 +21,23 @@ abstract class Streamer[TInputKey, TInputValue, TOutputKey, TOutputValue] extend
         properties.put(StreamsConfig.DEFAULT_KEY_SERDE_CLASS_CONFIG, config.keySerde)
         properties.put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, config.keySerde)
         properties.put(AbstractKafkaAvroSerDeConfig.SCHEMA_REGISTRY_URL_CONFIG, config.schema)
-
-//        val streamBuilder: KStreamBuilder = new KStreamBuilder()
-//        val inputStreams: KStream[TInputKey, TInputValue] = streamBuilder.stream(config.inputTopics)
-//        val outputStream: KStream[TOutputKey, TOutputValue] = transform(inputStreams)
-//        outputStream.to(config.outputTopic)
+        properties.put(StreamsConfig.CACHE_MAX_BYTES_BUFFERING_CONFIG, 0.toString)
 
         val streamBuilder = configureStreamBuilder()
         streams = new KafkaStreams(streamBuilder, properties)
     }
 
     def configureStreamBuilder() : KStreamBuilder = {
+
         val streamBuilder: KStreamBuilder = new KStreamBuilder()
-        val inputStreams: KStream[TInputKey, TInputValue] = streamBuilder.stream(config.inputTopics)
+        var inputStreams: List[KStream[TInputKey, TInputValue]] = List()
+
+        val topics = config.inputTopics.split(";")
+        for(topic <- topics) {
+            val stream: KStream[TInputKey, TInputValue] = streamBuilder.stream(topic)
+            inputStreams = stream :: inputStreams
+        }
+
         val outputStream: KStream[TOutputKey, TOutputValue] = transform(inputStreams)
         outputStream.to(config.outputTopic)
 
@@ -50,9 +55,5 @@ abstract class Streamer[TInputKey, TInputValue, TOutputKey, TOutputValue] extend
         }))
     }
 
-    def transform(stream: KStream[TInputKey, TInputValue]) : KStream[TOutputKey, TOutputValue]
+    def transform(streams: List[KStream[TInputKey, TInputValue]]) : KStream[TOutputKey, TOutputValue]
 }
-
-
-
-

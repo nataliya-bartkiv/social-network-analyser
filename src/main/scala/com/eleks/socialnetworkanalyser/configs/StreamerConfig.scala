@@ -6,7 +6,7 @@ case class StreamerConfig (appId : String,
                            bootstrapServers : String = "http://localhost:9092/",
                            keySerde : String = classOf[AvroSerde].getName,
                            valueSerde : String = classOf[AvroSerde].getName,
-                           inputTopic : String,
+                           inputTopics : String,
                            outputTopic : String,
                            schema : String = "http://localhost:8081/"
                           )

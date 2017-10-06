@@ -8,8 +8,8 @@ import org.apache.kafka.streams._
 import org.apache.kafka.streams.kstream._
 
 abstract class Streamer[TInputKey, TInputValue, TOutputKey, TOutputValue] extends Runnable {
-    private var config : StreamerConfig = _
-    private var streams : KafkaStreams = _
+    protected var config : StreamerConfig = _
+    protected var streams : KafkaStreams = _
 
     def configure(config : StreamerConfig) {
         this.config = config
@@ -21,14 +21,24 @@ abstract class Streamer[TInputKey, TInputValue, TOutputKey, TOutputValue] extend
         properties.put(StreamsConfig.DEFAULT_VALUE_SERDE_CLASS_CONFIG, config.keySerde)
         properties.put(AbstractKafkaAvroSerDeConfig.SCHEMA_REGISTRY_URL_CONFIG, config.schema)
 
+//        val streamBuilder: KStreamBuilder = new KStreamBuilder()
+//        val inputStreams: KStream[TInputKey, TInputValue] = streamBuilder.stream(config.inputTopics)
+//        val outputStream: KStream[TOutputKey, TOutputValue] = transform(inputStreams)
+//        outputStream.to(config.outputTopic)
 
-        val streamBuilder: KStreamBuilder = new KStreamBuilder()
-        val inputStream: KStream[TInputKey, TInputValue] = streamBuilder.stream(config.inputTopic)
-        val outputStream: KStream[TOutputKey, TOutputValue] = transform(inputStream)
-        outputStream.to(config.outputTopic)
-
+        val streamBuilder = configureStreamBuilder()
         streams = new KafkaStreams(streamBuilder, properties)
     }
+
+    def configureStreamBuilder() : KStreamBuilder = {
+        val streamBuilder: KStreamBuilder = new KStreamBuilder()
+        val inputStreams: KStream[TInputKey, TInputValue] = streamBuilder.stream(config.inputTopics)
+        val outputStream: KStream[TOutputKey, TOutputValue] = transform(inputStreams)
+        outputStream.to(config.outputTopic)
+
+        streamBuilder
+    }
+
 
     override def run(): Unit = {
         streams.start()

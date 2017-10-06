@@ -16,7 +16,7 @@ object StreamingConfigManager {
         StreamerConfig(
             "user-statistics", config.brokerList,
             classOf[AvroSerde].getName, classOf[AvroSerde].getName,
-            "posts", "user-stats",
+            "users;posts", "user-stats",
             config.schema
         )
     }

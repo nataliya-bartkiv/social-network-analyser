@@ -30,7 +30,7 @@ object Main {
         postStatsStreamer.start()
         userStatsStreamer.start()
 
-        userProducer.start()
+        //userProducer.start()
         postProducer.start()
         actionProducer.start()
     }

@@ -22,6 +22,27 @@ object CountryStatsStreamer extends Streamer {
         }
     }
 
+    class UserPostValueJoiner extends ValueJoiner[GenericRecord, GenericRecord, String] {
+        override def apply(userRecord: GenericRecord, postRecord: GenericRecord): String = {
+            val user = userFormatter.from(userRecord)
+            user.country
+        }
+    }
+
+    class CountryKeyMapper extends KeyValueMapper[Int, String, KeyValue[String, String]] {
+        override def apply(userId: Int, country: String) : KeyValue[String, String] = {
+            new KeyValue(country, country)
+        }
+    }
+
+    class CountryStatsKeyValueMapper extends KeyValueMapper[String, Long, KeyValue[String, GenericRecord]] {
+        override def apply(country: String, postCount: Long): KeyValue[String, GenericRecord] = {
+            val countryStats = CountryStats(country, postCount)
+            val statsRecord = statsFormatter.to(countryStats)
+            new KeyValue(country, statsRecord)
+        }
+    }
+
     override def configureStreamBuilder() : KStreamBuilder = {
         val streamBuilder = new KStreamBuilder()
 
@@ -31,37 +52,28 @@ object CountryStatsStreamer extends Streamer {
             throw new IllegalArgumentException("There must be 2 topics to create user statistics!")
         }
 
-        val userStream: KStream[Int, GenericRecord] = streamBuilder.stream(topics.head)
+        val userTable: KStream[Int, GenericRecord] = streamBuilder.stream(topics.head)
         val postStream: KStream[Int, GenericRecord] = streamBuilder.stream(topics(1))
-        val outputStream = transform(userStream, postStream)
+        val outputStream = transform(userTable, postStream)
         outputStream.to(config.outputTopic)
 
         streamBuilder
     }
 
     def transform(userStream: KStream[Int, GenericRecord], postStream: KStream[Int, GenericRecord]): KStream[String, GenericRecord] = {
-        val modifiedPostStream = postStream.map[Int, GenericRecord] (new PostKeyMapper)
+        val modifiedPostStream: KStream[Int, GenericRecord] = postStream.map[Int, GenericRecord] (new PostKeyMapper)
 
+
+        //TODO : Somehow get ALL users, not only once produced earlier
         userStream.join[GenericRecord, String] (
             modifiedPostStream,
-            new ValueJoiner[GenericRecord, GenericRecord, String] {
-                override def apply(value1: GenericRecord, value2: GenericRecord): String = {
-                    val user = userFormatter.from(value1)
-                    user.country
-                }
-            },
+            new UserPostValueJoiner,
             JoinWindows.of(TimeUnit.HOURS.toMillis(1))
-        ).map[String, String](new KeyValueMapper[Int, String, KeyValue[String, String]] {
-            override def apply(key: Int, value: String) : KeyValue[String, String] = {
-                new KeyValue(value, value)
-            }
-        }).groupByKey().count().toStream()
-        .map[String, GenericRecord](new KeyValueMapper[String, Long, KeyValue[String, GenericRecord]] {
-            override def apply(key: String, value: Long) : KeyValue[String, GenericRecord] = {
-                val countryStats = CountryStats(key, value)
-                val statsRecord = statsFormatter.to(countryStats)
-                new KeyValue(key, statsRecord)
-            }
-        })
+        )
+            .map[String, String](new CountryKeyMapper)
+            .groupByKey()
+            .count()
+            .toStream()
+            .map[String, GenericRecord](new CountryStatsKeyValueMapper)
     }
 }

@@ -14,11 +14,10 @@ object CountryStatsStreamer extends Streamer {
     val postFormatter : RecordFormat[Post] = RecordFormat[Post]
     val statsFormatter : RecordFormat[CountryStats] = RecordFormat[CountryStats]
 
-    class PostKeyMapper extends KeyValueMapper[Int, GenericRecord, KeyValue[Int, GenericRecord]] {
-        override def apply(postId: Int, postRecord: GenericRecord): KeyValue[Int, GenericRecord] = {
-            val user = postFormatter.from(postRecord)
-            val userId = user.userId
-            new KeyValue(userId, postRecord)
+    class PostKeyMapper extends KeyValueMapper[Int, GenericRecord, Int] {
+        override def apply(key: Int, value: GenericRecord) : Int = {
+            val post = postFormatter.from(value)
+            post.userId
         }
     }
 
@@ -29,9 +28,9 @@ object CountryStatsStreamer extends Streamer {
         }
     }
 
-    class CountryKeyMapper extends KeyValueMapper[Int, String, KeyValue[String, String]] {
-        override def apply(userId: Int, country: String) : KeyValue[String, String] = {
-            new KeyValue(country, country)
+    class CountryKeyMapper extends KeyValueMapper[Int, String, String] {
+        override def apply(key: Int, value: String) : String = {
+            value
         }
     }
 
@@ -63,12 +62,12 @@ object CountryStatsStreamer extends Streamer {
 
     def transform(userTable: KTable[Int, GenericRecord], postStream: KStream[Int, GenericRecord]): KStream[String, GenericRecord] = {
         postStream
-                .map[Int, GenericRecord] (new PostKeyMapper)
+                .selectKey[Int](new PostKeyMapper)
                 .join[GenericRecord, String] (
                     userTable,
                     new PostUserValueJoiner
                 )
-                .map[String, String] (new CountryKeyMapper)
+                .selectKey[String](new CountryKeyMapper)
                 .groupByKey()
                 .count(TimeWindows.of(TimeUnit.HOURS.toMillis(1)))
                 .toStream()

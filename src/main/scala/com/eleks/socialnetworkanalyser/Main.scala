@@ -30,11 +30,11 @@ object Main {
         ActionProducer.configure(ProducerConfigManager.getActionConfig(config))
         val actionProducer = new Thread(ActionProducer)
 
-        //postStatsStreamer.start()
-        //userStatsStreamer.start()
+        postStatsStreamer.start()
+        userStatsStreamer.start()
         countryStatsStreamer.start()
 
-        userProducer.start()
+        //userProducer.start()
         postProducer.start()
         actionProducer.start()
     }

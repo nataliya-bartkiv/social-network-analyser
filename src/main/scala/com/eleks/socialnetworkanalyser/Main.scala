@@ -34,7 +34,7 @@ object Main {
         userStatsStreamer.start()
         countryStatsStreamer.start()
 
-        //userProducer.start()
+        userProducer.start()
         postProducer.start()
         actionProducer.start()
     }
